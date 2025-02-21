@@ -23,7 +23,7 @@ export default function Home() {
     const fetchData = async () => {
       try {
         // Use a relative URL if your page is also served from the same domain:
-        const res = await fetch(`http://localhost:3000/api`, {
+        const res = await fetch(`https://retal-project-opal.vercel.app/api`, {
           // credentials: "include",
           method: "GET",
           headers: {
