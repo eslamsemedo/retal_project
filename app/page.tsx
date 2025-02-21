@@ -1,10 +1,11 @@
 // app/live/LiveClient.tsx
 'use client';
 
+import Monitor from '@/components/monitor';
 // import { cookies } from 'next/headers';
 import { useState, useEffect } from 'react';
 
-interface SensorData {
+export interface SensorData {
   pressure: string;
   temp: string;
   humidity: string;
@@ -57,12 +58,13 @@ export default function Home() {
   // const humidity = (await cookies()).get("humidity")?.value || "N/A";
 
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+    <div className="min-h-screen flex items-center justify-center bg-gray-100">
       {/* {(globalThis as any).pressure} {(globalThis as any).temp} {(globalThis as any).humidity} */}
       {/* {pressure} {temp} {humidity} */}
-      <p>Humidity: {sensorData.humidity}</p>
+      {/* <p>Humidity: {sensorData.humidity}</p>
       <p>Pressure: {sensorData.pressure}</p>
-      <p>Temperature: {sensorData.temp}</p>
+      <p>Temperature: {sensorData.temp}</p> */}
+      <Monitor data={sensorData} />
     </div>
   );
 }

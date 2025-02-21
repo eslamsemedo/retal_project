@@ -14,6 +14,7 @@ declare global {
     humidity: string;
   }
 }
+
 export async function GET() {
   return NextResponse.json(
     {
@@ -23,6 +24,8 @@ export async function GET() {
     }
   )
 }
+
+
 
 export async function POST(request: Request) {
   const { pressure, temp, humidity }: DataRequestBody = await request.json();
