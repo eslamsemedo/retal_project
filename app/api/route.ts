@@ -14,7 +14,7 @@ declare global {
     humidity: string;
   }
 }
-export async function GET(request: Request) {
+export async function GET() {
   return NextResponse.json(
     {
       pressure: (globalThis as any).pressure,
